@@ -1,0 +1,11 @@
+kpsewhich -var-value=TEXMFHOME
+
+kpsepath -n latex tex
+
+
+copy your class on ~/texmf/tex/latex
+
+# it is suggested, but was not neccesary
+# sudo mktexlsr
+# texhash ~/texmf
+
