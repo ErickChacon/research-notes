@@ -50,7 +50,7 @@
 \setlength{\headheight}{27.7pt} % should be large enough
 \titleformat{\section}[block]{\color{\@fiscolor}\bfseries\large}{\color{\@fiscolor}\thesection.}{0.5em}{}[] % change aesthetic of section
 \titleformat{\subsection}[block]{\color{\@fiscolor}\bfseries}{\color{\@fiscolor}\thesubsection.}{0.5em}{}[] % change aesthetic of section
-\titleformat{\subsubsection}[block]{\color{\@fiscolor}\bfseries}{\color{\@fiscolor}}{}{}[] % change aesthetic of section
+\titleformat{\subsubsection}[block]{\color{\@fiscolor}\bfseries}{\color{\@fiscolor}}{0em}{}[] % change aesthetic of section
 \definecolor{chicol}{RGB}{181,18,27}
 \newcommand{\fp}[1][chicol]{ % red box for equation
 \tag*{\tikz \path [fill=#1]  (0,0) rectangle (7pt,7pt);}
