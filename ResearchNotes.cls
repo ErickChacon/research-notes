@@ -8,7 +8,7 @@
 % ==================================================
 
 % --------------------------------------------------
-% DEFINING BASIC INFORMATION 
+% DEFINING BASIC INFORMATION
 % --------------------------------------------------
 \newcommand{\ResearchNotesUpdate}{2016/04/17}
 \newcommand{\ResearchNotesVersion}{1.0}
@@ -26,7 +26,7 @@
 % Pass unknown options to article class.
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 % Process the options given by the user.
-\ProcessOptions\relax 
+\ProcessOptions\relax
 \PassOptionsToPackage{top=\ResearchNotes@top, bottom=\ResearchNotes@bottom, right=\ResearchNotes@right, left=\ResearchNotes@left}{geometry}
 % Loas article class.
 \LoadClass{article}
@@ -48,8 +48,9 @@
 % --------------------------------------------------
 \renewcommand{\headrulewidth}{0pt} % do not show rule on header and foot
 \setlength{\headheight}{27.7pt} % should be large enough
-\titleformat{\section}[block]{\color{\@fiscolor}\bfseries\large}{\color{\@fiscolor}\thesection.}{0.5em}{}[] % change aesthetic of section 
-\titleformat{\subsection}[block]{\color{\@fiscolor}\bfseries}{\color{\@fiscolor}\thesubsection.}{0.5em}{}[] % change aesthetic of section 
+\titleformat{\section}[block]{\color{\@fiscolor}\bfseries\large}{\color{\@fiscolor}\thesection.}{0.5em}{}[] % change aesthetic of section
+\titleformat{\subsection}[block]{\color{\@fiscolor}\bfseries}{\color{\@fiscolor}\thesubsection.}{0.5em}{}[] % change aesthetic of section
+\titleformat{\subsubsection}[block]{\color{\@fiscolor}\bfseries}{\color{\@fiscolor}}{}{}[] % change aesthetic of section
 \definecolor{chicol}{RGB}{181,18,27}
 \newcommand{\fp}[1][chicol]{ % red box for equation
 \tag*{\tikz \path [fill=#1]  (0,0) rectangle (7pt,7pt);}
@@ -79,7 +80,7 @@
 \newcommand{\keywords}[2][Keywords:]{\gdef\@keyname{#1}\gdef\@keywords{#2}}
 \newcommand{\institute}[1]{\gdef\@institute{#1}}
 \newcommand{\logos}[2]{\gdef\@firlogo{#1} \gdef\@seclogo{#2}}
-\newcommand{\colors}[4]{\gdef\@fiscolor{#1} \gdef\@titcolor{#2} 
+\newcommand{\colors}[4]{\gdef\@fiscolor{#1} \gdef\@titcolor{#2}
 \gdef\@boxcolor{#3} \gdef\@typecolor{#4}}
 % Send a warning when the command is not called.
 \renewcommand{\@title}{\@latex@warning@no@line{
@@ -95,7 +96,7 @@ ResearchNotes Class: No \noexpand\authorfoot given}}
 \renewcommand{\maketitle}{
 \thispagestyle{plain} % plain-style pages such as chapters and titlepage
 \if@twocolumn
-\twocolumn[{ 
+\twocolumn[{
 \fi
 % White space.
 {\ }\\[-3ex]
@@ -146,7 +147,7 @@ ResearchNotes Class: No \noexpand\authorfoot given}}
 % HEADER AND FOOT
 % --------------------------------------------------
 \pagestyle{fancyplain} %  for absolutely all pages.
-\fancyhf{} % clean customization 
+\fancyhf{} % clean customization
 % Header.
 \lhead{\fancyplain{
   \begin{tikzpicture} [remember picture,overlay]
