@@ -99,14 +99,18 @@ ResearchNotes Class: No \noexpand\authorfoot given}}
 \twocolumn[{
 \fi
 % White space.
-{\ }\\[-3ex]
+{\ }\\[-4ex]
 % Type of document.
 \noindent\ifx\@doctype\@empty\else
-{\Large
-\textbf{\textcolor{\@typecolor}{\@doctype}}}\\[3ex]
+{\Large \bf \textcolor{\@typecolor}{\@doctype}\par}
 \fi
-% Title.
-{\LARGE \textbf{\textcolor{\@titcolor}{\@title}}}\\[3ex]
+% Title.\linespread{1.5}
+% {\LARGE \textbf{\textcolor{\@titcolor}{\@title}}}\\[3ex]
+% \begin{center}
+{\centering \linespread{1.1}\LARGE \bf \textcolor{\@titcolor}{\@title}\par}
+% \end{center}
+{\ }\\[0.3ex]
+% {\LARGE \textbf{\textcolor{\@titcolor}{\@title}}}\\[3ex]
 % Author and date.
 {\large \textcolor{\@fiscolor}{\textsc{\@author \hfill \@date}}}\\[3ex]
 % Abstract box.
