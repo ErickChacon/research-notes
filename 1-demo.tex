@@ -1,5 +1,6 @@
-\documentclass[10pt, a4paper, twocolumn]{ResearchNotes}
-%\documentclass[10pt, a4paper, twocolumn, top=4cm,bottom=3.5cm, right=1.2cm,left=1.5cm]{ResearchNotes}
+% \documentclass[12pt, a4paper]{SimpleNotes}
+%  \documentclass[11pt, a4paper, top=4cm,bottom=3.5cm, right=3cm,left=3cm]{ResearchNotes}
+ \documentclass[11pt, a4paper, top=4cm,bottom=3.5cm, right=3cm,left=3cm]{SimpleNotes}
 %\usepackage[latin1]{inputenc} %for other languages but english
 %\usepackage[spanish]{babel}
 \doctype{Research Notes:}
@@ -18,6 +19,7 @@
 \logos{chicas}{medical-school}
 % Defining own colors of the template.
 \definecolor{main_color}{RGB}{181,18,27}
+% \definecolor{main_color}{RGB}{0,0,0}
 \colorlet{tit_color}{main_color!80!black}
 \colorlet{box_color}{main_color!10}
 \colorlet{type_color}{black!60}
@@ -28,18 +30,30 @@
 % \linespread{2}
 \begin{document}
 \maketitle
+
 \section{Section 1}
-In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.\\
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
 
 \begin{sframe}{box_color}
-\textbf{\color{main_color} Statement:}\\
-$~~p(y>r|\theta)=(1-\theta)^r$, where $r = 1,2,...$
+  \textbf{Statement}:\\
+\begin{equation}
+  \label{eq:bla}
+~~p(y>r|\theta)=(1-\theta)^r,
+\end{equation}
+where $r = 1,2,...$
 \end{sframe}
 
 \begin{sframe}{white}
-\textbf{\color{main_color} Proof:}
+\textbf{Proof}:
 \[p(y>r|\theta)=1-p(y\leq r|\theta)\]
- 
+
 \[p(y>r|\theta)=1-\sum\limits_{k=1}^{r}(1-\theta)^{k-1}\theta\]
 
 \[p(y>r|\theta)=1-\theta\sum\limits_{k=1}^{r}(1-\theta)^{k-1}\]
@@ -47,7 +61,7 @@ $~~p(y>r|\theta)=(1-\theta)^r$, where $r = 1,2,...$
 \[p(y>r|\theta)=1-\theta\bigg[\frac{1-(1-\theta)^r}{\theta}\bigg]\]
 \[p(y>r|\theta)=1-[1-(1-\theta)^r]=(1-\theta)^r\fp\]
 \end{sframe}
-%
+
 For this reason, the negative binomial distribution has certain assumptions considering that each event come from a Bernoulli distribution.(i) Each $x_i$ is independent of any other $x_j$, (ii). They are identically distributed $x_i\sim\theta^{x_i}(1-\theta)^{1-x_i}$, where $i =1,2,...$. (iii) The variance is greater than the mean. For this reason is used in overdispersed countable data. (iv) This distribution is unimodal.
 
 For this reason, the negative binomial distribution has certain assumptions considering that each event come from a Bernoulli distribution.(i) Each $x_i$ is independent of any other $x_j$, (ii). They are identically distributed $x_i\sim\theta^{x_i}(1-\theta)^{1-x_i}$, where $i =1,2,...$. (iii) The variance is greater than the mean. For this reason is used in overdispersed countable data. (iv) This distribution is unimodal.
@@ -57,7 +71,7 @@ For this reason, the negative binomial distribution has certain assumptions cons
 For this reason, the negative binomial distribution has certain assumptions considering that each event come from a Bernoulli distribution.(i) Each $x_i$ is independent of any other $x_j$, (ii). They are identically distributed $x_i\sim\theta^{x_i}(1-\theta)^{1-x_i}$, where $i =1,2,...$. (iii) The variance is greater than the mean. For this reason is used in overdispersed countable data. (iv) This distribution is unimodal.
 
 In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success. For this reason, the negative binomial distribution has certain assumptions considering that each event come from a Bernoulli distribution.(i) Each $x_i$ is independent of any other $x_j$, (ii). They are identically distributed $x_i\sim\theta^{x_i}(1-\theta)^{1-x_i}$, where $i =1,2,...$. (iii) The variance is greater than the mean. For this reason is used in overdispersed countable data. (iv) This distribution is unimodal.
-\section{Section 1}
+\section{Section 2}
 In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success. For this reason, the negative binomial distribution has certain assumptions considering that each event come from a Bernoulli distribution.(i) Each $x_i$ is independent of any other $x_j$, (ii) They are identically distributed $x_i\sim\theta^{x_i}(1-\theta)^{1-x_i}$, where $i =1,2,...$. (iii) The variance is greater than the mean. For this reason is used in overdispersed countable data. (iv) This distribution is unimodal.
 \section{Section 1}
 In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success. For this reason, the negative binomial distribution has certain assumptions considering that each event come from a Bernoulli distribution.(i) Each $x_i$ is independent of any other $x_j$, (ii) They are identically distributed $x_i\sim\theta^{x_i}(1-\theta)^{1-x_i}$, where $i =1,2,...$. (iii) The variance is greater than the mean. For this reason is used in overdispersed countable data. (iv) This distribution is unimodal.
