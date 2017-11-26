@@ -89,7 +89,6 @@ ResearchNotes Class: No \noexpand\title given}}
 ResearchNotes Class: No \noexpand\titleshort given}}
 \newcommand{\@authorfoot}{\@latex@warning@no@line{
 ResearchNotes Class: No \noexpand\authorfoot given}}
-
 % --------------------------------------------------
 % DEFINING THE TITLE PAGE
 % --------------------------------------------------
@@ -112,7 +111,13 @@ ResearchNotes Class: No \noexpand\authorfoot given}}
 {\ }\\[0.3ex]
 % {\LARGE \textbf{\textcolor{\@titcolor}{\@title}}}\\[3ex]
 % Author and date.
-{\large \textcolor{\@fiscolor}{\textsc{\@author \hfill \@date}}}\\[3ex]
+% {\large \textcolor{\@fiscolor}{\textsc{\@author \hfill \@date}}}\\[3ex]
+{\centering \large \textcolor{\@fiscolor}{\textsc{\@author}}\par}
+{\ }\\[0.3ex]
+% {\large \textcolor{\@fiscolor}{\textsc{\@date}}}\\[3ex]
+{\centering \large \textcolor{\@fiscolor}{\textsc{\@date}}\par}
+    % \vskip 1.5em%
+{\ }\\[0.3ex]
 % Abstract box.
 \ifx\@abstract\@empty
 \begingroup%

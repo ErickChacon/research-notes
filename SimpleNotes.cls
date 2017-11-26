@@ -91,6 +91,7 @@ SimpleNotes Class: No \noexpand\titleshort given}}
 \newcommand{\@authorfoot}{\@latex@warning@no@line{
 SimpleNotes Class: No \noexpand\authorfoot given}}
 
+% \newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
   % \renewenvironment{abstract}{%
   %     \begin{center}%
   %       \bfseries Abstract
@@ -102,52 +103,36 @@ SimpleNotes Class: No \noexpand\authorfoot given}}
 % --------------------------------------------------
 \renewcommand{\maketitle}{
 
-% \twocolumn[{
-% \newpage
-  % \null
-  \vskip 2em%
-  \begin{center}%
-  \let \footnote \thanks
-    {\LARGE \bf \@title \par}%
-    \vskip 1.5em%
-    {\large
-      \lineskip .5em%
-      \begin{tabular}[t]{c}%
-        \@author
-      \end{tabular}\par}%
-    \vskip 1em%
-    {\large \@date}\par
-    \vskip 1em%
-    {\bf \@absname \par}%
-    \vskip 1.5em%
-  \end{center}%
+\thispagestyle{plain} % plain-style pages such as chapters and titlepage
+\if@twocolumn
+\twocolumn[{
+\fi
 
-\noindent\makebox[\textwidth][c]{%
-    \begin{minipage}{0.85\textwidth}
-    \@abstract
-    \end{minipage}}
+  \vskip 2em
+  \begin{center}
+    {\LARGE \bf \@title\par}
+    \vskip 2em
+    {\large \@author\par}
+    \vskip 1em
+    {\small\@institute\par}
+    \vskip 1em
+    {\@date\par}
+    \vskip 1.5em
+    {\bf \@absname\par}
+    \vskip 1.5em
+  \end{center}
 
-  \par
-  \vskip 1.5em
-% }]
+  \noindent\makebox[\textwidth][c]{
+    \begin{minipage}{0.9\textwidth}
+    {\@abstract}
+    \end{minipage}
+  \par}
+  \vskip 1em
 
-% \thispagestyle{plain} % plain-style pages such as chapters and titlepage
-% \if@twocolumn
-% \twocolumn[{
-% \fi
-% % White space.
-% {\ }\\[-4ex]
-% % Title.\linespread{1.5}
-% % {\LARGE \textbf{\textcolor{\@titcolor}{\@title}}}\\[3ex]
-% % \begin{center}
-% {\centering \linespread{1.1}\LARGE \bf \@title\par}
-% % \end{center}
-% {\ }\\[0.3ex]
-% % {\LARGE \textbf{\textcolor{\@titcolor}{\@title}}}\\[3ex]
-% % Author and date.
-% {\large {\textsc{\@author \hfill \@date}}}\\[3ex]
-% \if@twocolumn
-% {\ }\\[1ex]
-% }]
-% \fi
+  {\noindent\textbf{\@keyname} \@keywords\par}
+  \vskip 2em
+
+\if@twocolumn
+}]
+\fi
 }
