@@ -1,7 +1,7 @@
 % ==================================================
 % ABOUT RESEARCHNOTES CLASS
 % ==================================================
-% Class:   ResearchNotes.cls
+% Class:   ResearchNotess.cls
 % Version: 1.0 (17/04/2016)
 % Author:  Erick Chacon Montalvan (eral.th07@gmail.com)
 % License: GNU General Public License (GPL) 3.0
@@ -10,12 +10,12 @@
 % --------------------------------------------------
 % DEFINING BASIC INFORMATION
 % --------------------------------------------------
-\newcommand{\ResearchNotesUpdate}{2016/04/17}
-\newcommand{\ResearchNotesVersion}{1.0}
+\newcommand{\ResearchNotessUpdate}{2016/04/17}
+\newcommand{\ResearchNotessVersion}{1.0}
 % Allways required sentences.
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{ResearchNotes}[\ResearchNotesUpdate\space Version
-\ResearchNotesVersion\space by Erick A. Chacon-Montalvan, Lancaster University]
+\ProvidesClass{ResearchNotess}[\ResearchNotessUpdate\space Version
+\ResearchNotessVersion\space by Erick A. Chacon-Montalvan, Lancaster University]
 % Allow give margin options.
 \RequirePackage{kvoptions}
 \DeclareStringOption[4cm]{top}
@@ -27,7 +27,8 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 % Process the options given by the user.
 \ProcessOptions\relax
-% \PassOptionsToPackage{top=\ResearchNotes@top, bottom=\ResearchNotes@bottom, right=\ResearchNotes@right, left=\ResearchNotes@left}{geometry}
+\PassOptionsToPackage{top=\ResearchNotess@top, bottom=\ResearchNotess@bottom, right=\ResearchNotess@right, left=\ResearchNotess@left}{geometry}
+% \geometry{top=3.7cm, bottom=3.5cm, right=2.5cm, left=3cm}
 % Loas article class.
 \LoadClass{article}
 
@@ -84,11 +85,11 @@
 \gdef\@boxcolor{#3} \gdef\@typecolor{#4}}
 % Send a warning when the command is not called.
 \renewcommand{\@title}{\@latex@warning@no@line{
-ResearchNotes Class: No \noexpand\title given}}
+ResearchNotess Class: No \noexpand\title given}}
 \newcommand{\@titleshort}{\@latex@warning@no@line{
-ResearchNotes Class: No \noexpand\titleshort given}}
+ResearchNotess Class: No \noexpand\titleshort given}}
 \newcommand{\@authorfoot}{\@latex@warning@no@line{
-ResearchNotes Class: No \noexpand\authorfoot given}}
+ResearchNotess Class: No \noexpand\authorfoot given}}
 % --------------------------------------------------
 % DEFINING THE TITLE PAGE
 % --------------------------------------------------

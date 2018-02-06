@@ -1,0 +1,70 @@
+
+---
+title: "A"
+author: "Erick A. Chacon-Montalvan"
+date: "05 Feb 2018"
+documentclass: ResearchNotess
+classoption: 11pt, a4paper, top=3.7cm, bottom=3.5cm, right=2.5cm, left=3cm
+output:
+  pdf_document:
+    includes:
+      in_header: rmd-header.tex
+    template: rmd-template.tex
+    number_sections: true
+    fig_caption: true
+---
+
+<!-- geometry: top=4.7cm, bottom=3.5cm, right=2.5cm, left=3cm -->
+
+
+# Introduction
+
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+In the geometric distribution, $\theta$ represents the probability of succes in each trial. Furthermore, it should follow that $y$ is countable and greater than one. In general, in the negative binomial distribution, $y$ is the number of trials until get the $k$ first success.
+
+- first
+- another
+- another
+- another
+    - another
+    - another
+    - another
+    - another
+- another
+- another
+
+\begin{sframe}{box_color}
+  \textbf{Statement}:\\
+\begin{equation}
+  \label{eq:bla}
+~~p(y>r|\theta)=(1-\theta)^r,
+\end{equation}
+where $r = 1,2,...$
+\end{sframe}
+
+\begin{sframe}{white}
+\textbf{Proof}:
+\[p(y>r|\theta)=1-p(y\leq r|\theta)\]
+
+\[p(y>r|\theta)=1-\sum\limits_{k=1}^{r}(1-\theta)^{k-1}\theta\]
+
+\[p(y>r|\theta)=1-\theta\sum\limits_{k=1}^{r}(1-\theta)^{k-1}\]
+\[p(y>r|\theta)=1-\theta\bigg[\frac{1-(1-\theta)^r}{1-(1-\theta)}\bigg]\]
+\[p(y>r|\theta)=1-\theta\bigg[\frac{1-(1-\theta)^r}{\theta}\bigg]\]
+\[p(y>r|\theta)=1-[1-(1-\theta)^r]=(1-\theta)^r\fp\]
+\end{sframe}
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+Table: Your Caption
+
+
+```{r, echo = FALSE, fig.cap = "hla"}
+library(ggplot2)
+data <- data.frame(x = 1:10, y = 10:1)
+ggplot(data, aes(x, y)) + geom_point()
+```
