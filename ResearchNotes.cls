@@ -199,3 +199,4 @@ ResearchNotes Class: No \noexpand\authorfoot given}}
   \textcolor{\@fiscolor}{\textbf{\@authorfoot}} \hfill \textcolor{\@fiscolor}{\textbf{\thepage}}\\
 }}
 \endinput
+

@@ -71,6 +71,7 @@
 \gdef\@abstract{}
 \gdef\@absname{}
 \gdef\@keywords{}
+\gdef\@keyname{}
 \gdef\@institute{}
 % Commands to read options.
 \newcommand{\doctype}[1]{\gdef\@doctype{#1}}
@@ -122,15 +123,22 @@ SimpleNotes Class: No \noexpand\authorfoot given}}
     \vskip 1.5em
   \end{center}
 
-  \noindent\makebox[\textwidth][c]{
-    \begin{minipage}{0.9\textwidth}
-    {\@abstract}
-    \end{minipage}
-  \par}
-  \vskip 1em
+  \ifx\@abstract\@empty
+  \else
+    \noindent\makebox[\textwidth][c]{
+      \begin{minipage}{0.9\textwidth}
+      {\@abstract}
+      \end{minipage}
+    \par}
 
-  {\noindent\textbf{\@keyname} \@keywords\par}
-  \vskip 2em
+    \ifx\@keywords\@empty
+      \vskip 2em
+    \else
+      \vskip 1em
+      {\noindent\textbf{\@keyname} \@keywords\par}
+      \vskip 2em
+    \fi
+  \fi
 
 \if@twocolumn
 }]
