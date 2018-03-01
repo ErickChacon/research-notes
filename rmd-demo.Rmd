@@ -3,7 +3,7 @@
 title: "A"
 author: "Erick A. Chacon-Montalvan"
 date: "05 Feb 2018"
-documentclass: ResearchNotess
+documentclass: ResearchNotes
 classoption: 11pt, a4paper, top=3.7cm, bottom=3.5cm, right=2.5cm, left=3cm
 output:
   pdf_document:
