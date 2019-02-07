@@ -42,6 +42,7 @@
 \RequirePackage{tcolorbox} % boxes with colors
 \RequirePackage[plainpages=false,pdfpagelabels,breaklinks=true]{hyperref} %hidelinks
 \RequirePackage{amssymb, amsmath} % for mathematical formulas
+\RequirePackage{xparse}
 
 % --------------------------------------------------
 % NEW COMMANDS AND ENVIRONMENTS I
@@ -92,12 +93,27 @@ SimpleNotes Class: No \noexpand\titleshort given}}
 \newcommand{\@authorfoot}{\@latex@warning@no@line{
 SimpleNotes Class: No \noexpand\authorfoot given}}
 
-% \newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
-  % \renewenvironment{abstract}{%
-  %     \begin{center}%
-  %       \bfseries Abstract
-  %     \end{center}
-  %   }%
+% Environment for abstract
+\RenewDocumentEnvironment{abstract}{o O{0.90} O{0.95}}
+  {
+    \hspace{\dimexpr (- \parindent +  \textwidth / 2 - #2 \textwidth / 2)}
+    \begin{minipage}{#2 \textwidth}
+      % {\section*{\centering Abstract}}
+      \begin{center}
+        {\bfseries\large Abstract}
+      \end{center}
+  }
+  {
+    \end{minipage}
+    {\ }\\[2ex]
+
+    \hspace{\dimexpr (- \parindent +  \textwidth / 2 - #3 \textwidth / 2)}
+    \begin{minipage}{#3 \textwidth}
+      \textbf{\textit{Keywords:}}
+      #1
+    \end{minipage}
+    {\ }\\[2ex]
+  }
 
 % --------------------------------------------------
 % DEFINING THE TITLE PAGE
@@ -119,26 +135,26 @@ SimpleNotes Class: No \noexpand\authorfoot given}}
     \vskip 1em
     {\@date\par}
     \vskip 1.5em
-    {\bf \@absname\par}
-    \vskip 1.5em
+    % {\bf \@absname\par}
+    % \vskip 1.5em
   \end{center}
 
-  \ifx\@abstract\@empty
-  \else
-    \noindent\makebox[\textwidth][c]{
-      \begin{minipage}{0.9\textwidth}
-      {\@abstract}
-      \end{minipage}
-    \par}
-
-    \ifx\@keywords\@empty
-      \vskip 2em
-    \else
-      \vskip 1em
-      {\noindent\textbf{\@keyname} \@keywords\par}
-      \vskip 2em
-    \fi
-  \fi
+  % \ifx\@abstract\@empty
+  % \else
+  %   \noindent\makebox[\textwidth][c]{
+  %     \begin{minipage}{0.9\textwidth}
+  %     {\@abstract}
+  %     \end{minipage}
+  %   \par}
+  %
+  %   \ifx\@keywords\@empty
+  %     \vskip 2em
+  %   \else
+  %     \vskip 1em
+  %     {\noindent\textbf{\@keyname} \@keywords\par}
+  %     \vskip 2em
+  %   \fi
+  % \fi
 
 \if@twocolumn
 }]
