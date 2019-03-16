@@ -41,7 +41,7 @@
 \RequirePackage{titlesec} % customization of titles
 \RequirePackage{tcolorbox} % boxes with colors
 \RequirePackage[plainpages=false,pdfpagelabels,breaklinks=true]{hyperref} %hidelinks
-\RequirePackage{amssymb, amsmath} % for mathematical formulas
+% \RequirePackage{amssymb, amsmath} % for mathematical formulas
 \RequirePackage{xparse}
 
 % --------------------------------------------------
@@ -74,6 +74,10 @@
 \gdef\@keywords{}
 \gdef\@keyname{}
 \gdef\@institute{}
+\gdef\@fiscolor{black}
+\gdef\@titcolor{black}
+\gdef\@boxcolor{black}
+\gdef\@typecolor{black}
 % Commands to read options.
 \newcommand{\doctype}[1]{\gdef\@doctype{#1}}
 \renewcommand{\title}[1]{\gdef\@title{#1}}
@@ -83,7 +87,7 @@
 \newcommand{\keywords}[2][Keywords:]{\gdef\@keyname{#1}\gdef\@keywords{#2}}
 \newcommand{\institute}[1]{\gdef\@institute{#1}}
 \newcommand{\logos}[2]{\gdef\@firlogo{#1} \gdef\@seclogo{#2}}
-\newcommand{\colors}[4]{\gdef\@fiscolor{black} \gdef\@titcolor{black}
+\newcommand{\colors}[4]{\gdef\@fiscolor{red} \gdef\@titcolor{red}
 \gdef\@boxcolor{#3} \gdef\@typecolor{#4}}
 % Send a warning when the command is not called.
 \renewcommand{\@title}{\@latex@warning@no@line{
